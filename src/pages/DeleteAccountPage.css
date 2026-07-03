@@ -1,0 +1,234 @@
+.delete-account-lang-switch {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.delete-account-lang-switch button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid var(--ha-accent);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ha-accent);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.delete-account-lang-switch button:hover {
+  background: rgba(107, 58, 31, 0.1);
+}
+
+.delete-account-lang-switch button.active {
+  background: var(--ha-accent);
+  color: #fff;
+}
+
+.delete-account-page {
+  --ha-bg: #f2e6c9;
+  --ha-bg-dark: #e8d9b0;
+  --ha-text: #2c1810;
+  --ha-text-muted: #5c4030;
+  --ha-accent: #6b3a1f;
+  --ha-accent-light: #8b5a2b;
+  --ha-title: #ffffff;
+  --ha-title-outline: #1a0a00;
+  --ha-warning-bg: #fff3cd;
+  --ha-warning-border: #c9a227;
+  --ha-card-bg: rgba(255, 255, 255, 0.45);
+  --ha-card-border: rgba(107, 58, 31, 0.25);
+  --ha-shadow: rgba(44, 24, 16, 0.12);
+
+  min-height: 100svh;
+  background: var(--ha-bg);
+  background-image:
+    radial-gradient(ellipse at top, rgba(255, 255, 255, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(107, 58, 31, 0.08) 0%, transparent 50%);
+  color: var(--ha-text);
+  text-align: center;
+  padding: 2rem 1.5rem 3rem;
+  box-sizing: border-box;
+}
+
+.delete-account-header {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+}
+
+.delete-account-logo {
+  width: min(280px, 80vw);
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.delete-account-header h1 {
+  font-family: var(--heading, system-ui, sans-serif);
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 800;
+  color: var(--ha-title);
+  text-shadow:
+    -2px -2px 0 var(--ha-title-outline),
+    2px -2px 0 var(--ha-title-outline),
+    -2px 2px 0 var(--ha-title-outline),
+    2px 2px 0 var(--ha-title-outline),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.delete-account-intro {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--ha-text-muted);
+  font-weight: 600;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.delete-account-warning {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--ha-warning-bg);
+  border: 2px solid var(--ha-warning-border);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.delete-account-warning p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ha-text);
+}
+
+.delete-account-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.delete-account-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--ha-card-bg);
+  border: 1px solid var(--ha-card-border);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 4px 20px var(--ha-shadow);
+}
+
+.delete-account-step-content {
+  max-width: 600px;
+}
+
+.delete-account-step-number {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ha-accent-light);
+  margin-bottom: 0.5rem;
+}
+
+.delete-account-step h2 {
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
+  font-weight: 800;
+  color: var(--ha-text);
+  margin: 0 0 0.75rem;
+}
+
+.delete-account-step-content > p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ha-text-muted);
+  font-weight: 600;
+  margin: 0;
+}
+
+.delete-account-step-figure {
+  margin: 0;
+  width: 100%;
+  max-width: 340px;
+}
+
+.delete-account-step-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px var(--ha-shadow);
+  border: 2px solid var(--ha-card-border);
+}
+
+.delete-account-footer {
+  max-width: 720px;
+  margin: 3rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ha-card-border);
+}
+
+.delete-account-footer p {
+  font-size: 0.9rem;
+  color: var(--ha-text-muted);
+  margin: 0;
+}
+
+.delete-account-footer a {
+  color: var(--ha-accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.delete-account-footer a:hover {
+  color: var(--ha-accent-light);
+}
+
+.delete-account-page--rtl .delete-account-warning {
+  text-align: right;
+}
+
+.delete-account-page--rtl .delete-account-step-number {
+  letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+  .delete-account-step {
+    flex-direction: row;
+    text-align: start;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .delete-account-step:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .delete-account-page--rtl .delete-account-step:nth-child(even) {
+    flex-direction: row;
+  }
+
+  .delete-account-page--rtl .delete-account-step:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .delete-account-step-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .delete-account-step-figure {
+    flex-shrink: 0;
+    max-width: 280px;
+  }
+}

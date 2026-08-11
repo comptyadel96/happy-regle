@@ -1,8 +1,27 @@
+.delete-account-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 .delete-account-lang-switch {
   display: flex;
-  justify-content: center;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+}
+
+.delete-account-nav-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ha-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.delete-account-nav-link:hover {
+  color: var(--ha-accent-light);
 }
 
 .delete-account-lang-switch button {

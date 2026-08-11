@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './DeleteAccountPage.css'
 
 const SUPPORT_EMAIL = 'happypalmary@gmail.com'
@@ -6,6 +7,7 @@ const SUPPORT_EMAIL = 'happypalmary@gmail.com'
 const TRANSLATIONS = {
   fr: {
     langLabel: 'Langue',
+    navPrivacy: 'Politique de confidentialité',
     title: 'Suppression de compte',
     intro:
       'Happy Arcade vous permet de supprimer votre compte et toutes les données associées directement depuis le jeu. Suivez les étapes ci-dessous pour effectuer la suppression.',
@@ -44,6 +46,7 @@ const TRANSLATIONS = {
   },
   ar: {
     langLabel: 'اللغة',
+    navPrivacy: 'سياسة الخصوصية',
     title: 'حذف الحساب',
     intro:
       'يتيح لك Happy Arcade حذف حسابك وجميع البيانات المرتبطة به مباشرة من داخل اللعبة. اتبع الخطوات أدناه لإتمام عملية الحذف.',
@@ -90,27 +93,36 @@ function DeleteAccountPage() {
   useEffect(() => {
     document.documentElement.lang = lang
     document.documentElement.dir = isRtl ? 'rtl' : 'ltr'
+    document.title =
+      lang === 'ar'
+        ? 'حذف الحساب — Happy Arcade'
+        : 'Suppression de compte — Happy Arcade'
   }, [lang, isRtl])
 
   return (
     <div className={`delete-account-page${isRtl ? ' delete-account-page--rtl' : ''}`}>
-      <div className="delete-account-lang-switch" role="group" aria-label={t.langLabel}>
-        <button
-          type="button"
-          className={lang === 'fr' ? 'active' : ''}
-          onClick={() => setLang('fr')}
-          aria-pressed={lang === 'fr'}
-        >
-          Français
-        </button>
-        <button
-          type="button"
-          className={lang === 'ar' ? 'active' : ''}
-          onClick={() => setLang('ar')}
-          aria-pressed={lang === 'ar'}
-        >
-          العربية
-        </button>
+      <div className="delete-account-topbar">
+        <div className="delete-account-lang-switch" role="group" aria-label={t.langLabel}>
+          <button
+            type="button"
+            className={lang === 'fr' ? 'active' : ''}
+            onClick={() => setLang('fr')}
+            aria-pressed={lang === 'fr'}
+          >
+            Français
+          </button>
+          <button
+            type="button"
+            className={lang === 'ar' ? 'active' : ''}
+            onClick={() => setLang('ar')}
+            aria-pressed={lang === 'ar'}
+          >
+            العربية
+          </button>
+        </div>
+        <Link to="/regle-confidentiel" className="delete-account-nav-link">
+          {t.navPrivacy}
+        </Link>
       </div>
 
       <header className="delete-account-header">

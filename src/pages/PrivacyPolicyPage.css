@@ -1,0 +1,217 @@
+.privacy-page {
+  --ha-bg: #f2e6c9;
+  --ha-text: #2c1810;
+  --ha-text-muted: #5c4030;
+  --ha-accent: #6b3a1f;
+  --ha-accent-light: #8b5a2b;
+  --ha-title: #ffffff;
+  --ha-title-outline: #1a0a00;
+  --ha-card-bg: rgba(255, 255, 255, 0.5);
+  --ha-card-border: rgba(107, 58, 31, 0.25);
+  --ha-shadow: rgba(44, 24, 16, 0.12);
+
+  min-height: 100svh;
+  background: var(--ha-bg);
+  background-image:
+    radial-gradient(ellipse at top, rgba(255, 255, 255, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(107, 58, 31, 0.08) 0%, transparent 50%);
+  color: var(--ha-text);
+  padding: 1.5rem 1.25rem 3rem;
+  box-sizing: border-box;
+}
+
+.privacy-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.privacy-lang-switch {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.privacy-lang-switch button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid var(--ha-accent);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ha-accent);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.privacy-lang-switch button:hover {
+  background: rgba(107, 58, 31, 0.1);
+}
+
+.privacy-lang-switch button.active {
+  background: var(--ha-accent);
+  color: #fff;
+}
+
+.privacy-nav-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ha-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.privacy-nav-link:hover {
+  color: var(--ha-accent-light);
+}
+
+.privacy-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 1.75rem;
+}
+
+.privacy-logo {
+  width: min(240px, 70vw);
+  height: auto;
+  margin-bottom: 1.25rem;
+}
+
+.privacy-header h1 {
+  font-family: var(--heading, system-ui, sans-serif);
+  font-size: clamp(1.6rem, 4.5vw, 2.35rem);
+  font-weight: 800;
+  color: var(--ha-title);
+  text-shadow:
+    -2px -2px 0 var(--ha-title-outline),
+    2px -2px 0 var(--ha-title-outline),
+    -2px 2px 0 var(--ha-title-outline),
+    2px 2px 0 var(--ha-title-outline),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.privacy-update {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ha-text-muted);
+}
+
+.privacy-intro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: start;
+}
+
+.privacy-intro p {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  font-weight: 600;
+  color: var(--ha-text-muted);
+}
+
+.privacy-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.privacy-section {
+  background: var(--ha-card-bg);
+  border: 1px solid var(--ha-card-border);
+  border-radius: 14px;
+  padding: 1.35rem 1.4rem;
+  box-shadow: 0 4px 16px var(--ha-shadow);
+  text-align: start;
+}
+
+.privacy-section h2 {
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+  font-weight: 800;
+  color: var(--ha-text);
+  margin: 0 0 0.85rem;
+}
+
+.privacy-section p {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--ha-text-muted);
+}
+
+.privacy-section p:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-section ul {
+  margin: 0 0 0.85rem;
+  padding-inline-start: 1.35rem;
+}
+
+.privacy-section li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  font-weight: 600;
+  color: var(--ha-text-muted);
+}
+
+.privacy-section a {
+  color: var(--ha-accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.privacy-section a:hover {
+  color: var(--ha-accent-light);
+}
+
+.privacy-info-list {
+  margin: 0;
+}
+
+.privacy-info-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.45fr) 1fr;
+  gap: 0.5rem 1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--ha-card-border);
+}
+
+.privacy-info-row:last-child {
+  border-bottom: none;
+}
+
+.privacy-info-row dt {
+  font-weight: 800;
+  color: var(--ha-text);
+  font-size: 0.9rem;
+}
+
+.privacy-info-row dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--ha-text-muted);
+  font-size: 0.95rem;
+}
+
+.privacy-email {
+  margin-top: 0.25rem !important;
+}
+
+@media (max-width: 560px) {
+  .privacy-info-row {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}
